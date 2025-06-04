@@ -80,6 +80,7 @@ public class SistemaCarcelario {
                         System.out.print("Ingresar gravedad del caso: ");
                         gravedad = sc.nextLine();
                         do {
+                            System.out.print("Ingrese la condena: ");
                             datocor = false;
                             try {
                                 condena = Integer.parseInt(sc.nextLine());
@@ -95,7 +96,6 @@ public class SistemaCarcelario {
 
                         } while (!datocor);
                         c += condena;
-                        sc.nextLine();
                         cont.delito(tipodel, fe, descrip, condena, gravedad);
 
                         opc1 = masdelitos();
