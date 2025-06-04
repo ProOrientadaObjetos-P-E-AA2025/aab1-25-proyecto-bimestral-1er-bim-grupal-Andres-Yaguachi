@@ -3,18 +3,17 @@ package clases;
 import java.io.Serializable;
 
 public class Delito implements Serializable {
+
     private String tipoDeDelito;
     private String fecha;
     private String descripcion;
-    private String autor;
-    private String condena;
+    private int condena;
     private String gravedad;
 
-    public Delito(String tipoDeDelito, String fecha, String descripcion, String autor, String condena, String gravedad) {
+    public Delito(String tipoDeDelito, String fecha, String descripcion, int condena, String gravedad) {
         this.tipoDeDelito = tipoDeDelito;
         this.fecha = fecha;
         this.descripcion = descripcion;
-        this.autor = autor;
         this.condena = condena;
         this.gravedad = gravedad;
     }
@@ -43,19 +42,11 @@ public class Delito implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public String getCondena() {
+    public int getCondena() {
         return condena;
     }
 
-    public void setCondena(String estado) {
+    public void setCondena(int estado) {
         this.condena = estado;
     }
 
@@ -66,21 +57,16 @@ public class Delito implements Serializable {
     public void setGravedad(String gravedad) {
         this.gravedad = gravedad;
     }
-    
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Delito{");
-        sb.append("tipoDeDelito: ").append(tipoDeDelito);
-        sb.append(", fecha: ").append(fecha);
-        sb.append(", descripcion: ").append(descripcion);
-        sb.append(", autor: ").append(autor);
-        sb.append(", condena: ").append(condena);
-        sb.append(", gravedad: ").append(gravedad);
-        sb.append('}');
+        sb.append("\n Delito: ").append(tipoDeDelito);
+        sb.append("\n  fecha del delito : ").append(fecha);
+        sb.append("\n  descripcion: ").append(descripcion);
+        sb.append("\n  condena: ").append(condena).append(" dias");
+        sb.append("\n  gravedad: ").append(gravedad);
         return sb.toString();
     }
-    
 
 }
